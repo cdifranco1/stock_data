@@ -16,8 +16,10 @@ public class CompanyServiceImplementation implements CompanyService {
   @Autowired
   private CompanyRepo companyRepo;
 
-  public void saveCompany(Company company){
-    companyRepo.save(company);
+  public Company saveCompany(Company company){
+    Company newCompany = companyRepo.save(company);
+
+    return newCompany;
   }
 
   @Override
